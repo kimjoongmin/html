@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="육아종합지원센터 홈페이지 구축(모바일 웹,반응형 웹),홈페이지 유지보수및호스팅,뉴스레터제작,책꽃이 프로그램연동등 차별화된 서비스를 지원합니다.">	
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="육아종합지원센터 홈페이지 구축 - 인재아이엔씨">
+	<meta property="og:description" content="육아종합지원센터 홈페이지 구축(모바일 웹,반응형 웹),홈페이지 유지보수및호스팅,뉴스레터제작,책꽃이 프로그램연동등 차별화된 서비스를 지원합니다.">
+	<meta property="og:image" content="http://childcare.injeinc.co.kr/images/logo.png">
+    <script src="./js/injeinc/jquery.min.js"></script>
+	<script src="./js/injeinc/jquery.plugin.js"></script>
+    <script src="./js/injeinc/common.js"></script>
+    <script src="./js/common2.js"></script>
+    <link rel="stylesheet" href="./css/base2.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>Clone : 육아종합지원센터 홈페이지 구축 - 인재아이엔씨</title> 
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="inner dFlex">
+                <h1><a href=""><img src="./images/logo.png" alt="인재inc 육아종합지원센터"></a></h1>
+                <div class="topNav">
+                   <a href="#modal_counsel" class="btn_modalOpen">문의/상담</a>
+                   <a href="" onclick="javascript:alert('준비중입니다');">데모 체험</a>
+                   <a href="" class="allNav">전체메뉴</a>
+                </div>
+                <div id="gnb">
+                   <ul>
+                       <li><a href="#section1">소개</a></li>
+                       <li><a href="#section2">주요기능</a></li>
+                       <li><a href="#section3">구축사례</a></li>
+                       <li><a href="#section4">홈페이지 구축과정</a></li>
+                       <li><a href="#section5">토탈유지보수 서비스제공</a></li>
+                       <li><a href="#section6">Contact Us</a></li>
+                   </ul>
+                   <a href="" class="allNavClose">닫기</a>
+                </div>
+            </div>
+        </div> 
+        <div id="modal_counsel" class="modalWrap wide">
+            <div class="modalTitle">
+                <h2>홈페이지 주요 메뉴</h2>
+                <a href="#" class="btn_modalClose">닫기</a>
+            </div>
+            <div class="modalContent">
+                <form method="post" action="">
+                    <div class="tableBox">
+                        <table class="form">
+                            <caption>구매문의 입력폼</caption>
+                            <colgroup>
+                                <col class="w25p">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td><input type="text" name="Name" class="w200"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">연락처</th>
+                                    <td><input type="text" name="Tel" class="w200" value=""></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일 주소</th>
+                                    <td><input type="text" name="Email" class="w200" value=""></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자동등록방지</th>
+                                    <td><input type="text" id="auto_num" class="w200" name="auto_num" title="문자입력"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의내용</th>
+                                    <td><textarea name="Memo" rows="15" class="w100p"></textarea></td>
+                                </tr>
+                            
+                        </tbody></table>
+                    </div>
+                    <div class="agreeBox">
+                        <b>개인정보 수집 및 이용안내</b>
+                        <p>
+                            문의 신청 시, 아래와 같이 이용자의 개인정보를 수집하고 있습니다. <br>
+                            개인정보 수집범위 : 이름, 연락처, 이메일 주소<br>
+                            개인정보 수집 및 이용목적 : 문의 신청 확인 및 회신<br>
+                            개인정보 수집 및 보유기간 : 이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용 목적이 달성되면 지체 없이 파기하며 보유기간은 최대 1년을 넘기지 않는 것을 원칙으로 합니다.
+                        </p>
+                    </div>
+                    <div class="agreeCheck">
+                        <label><input type="checkbox" name="" value="Y"> 개인정보 수집에 동의합니다.</label>
+                    </div>
+                    <div class="btnArea">
+                        <a href="#" class="btn">보내기</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="container">
+            <div id="sectionBtn">
+               <ul>
+                    <li class="item1 active"><a href="#section1">소개</a></li>
+                    <li class="item2"><a href="#section2">주요기능</a></li>
+                    <li class="item3"><a href="#section3">구축사례</a></li>
+                    <li class="item4"><a href="#section4">홈페이지 구축과정</a></li>
+                    <li class="item5"><a href="#section5">토탈유지보수 서비스제공</a></li>
+                    <li class="item6"><a href="#section6">Contact Us</a></li>
+               </ul>
+            </div>
+            <div id="section1" class="section section1">
+               <div class="inner">
+                    <p class="animate fadeLeft fadeIn">육아종합지원센터 홈페이지의 모든 것,<br><b>인재아이엔씨가 정답입니다.</b></p>
+                    <div class="mainList">
+                        <ul>
+                            <li class="animate fadeDown fadeIn"><span><img src="./images/img_section1_1.png" alt=""></span><b>홈페이지<br>제작</b></li>
+                            <li class="animate fadeDown fadeIn delay"><span><img src="./images/img_section1_2.png" alt=""></span><b>홈페이지<br>유지보수</b></li>
+                            <li class="animate fadeDown fadeIn delay2"><span><img src="./images/img_section1_3.png" alt=""></span><b>뉴스레터/<br>웹진 제작</b></li>
+                            <li class="animate fadeDown fadeIn delay3"><span><img src="./images/img_section1_4.png" alt=""></span><b>SMS/이메일<br>발송</b></li>
+                            <li class="animate fadeDown fadeIn delay4"><span><img src="./images/img_section1_5.png" alt=""></span><b>홈페이지<br>리뉴얼</b></li>
+                        </ul>
+                    </div>
+               </div>
+           </div>
+           <div id="section2" class="section section2">
+               <div class="inner">
+                   <h3 class="animate fadeUp">주요기능</h3>
+                   <p class="desc animate fadeUp">필요한 모든 기능을 담았습니다. <a href="#modal_mainInfo" class="btn_modalOpen">홈페이지 주요메뉴</a></p>
+                   <div id="modal_mainInfo" class="modalWrap wide">
+                       <div class="modalTitle">
+                           <h2>홈페이지 주요 메뉴</h2>
+                           <a href="#" class="btn_modalClose">닫기</a>
+                        </div>
+                       <div class="modalContent">
+                           <div><img src="./images/img_modal_menuList.jpg" alt="" width="100%"></div>
+                       </div>
+                   </div>
+                   <div class="mainInfo">
+                        <ul>
+                            <li class="animate fadeDown delay"><span><img src="./images/img_section2_1_1.png" alt=""></span><b>온라인<br>신청/접수</b></li>
+                            <li class="animate fadeDown delay2"><span><img src="./images/img_section2_1_2.png" alt=""></span><b>온라인<br>상담관리</b></li>
+                            <li class="animate fadeDown delay3"><span><img src="./images/img_section2_1_3.png" alt=""></span><b>SMS/<br>발송/관리</b></li>
+                            <li class="animate fadeDown delay4"><span><img src="./images/img_section2_1_4.png" alt=""></span><b>홈페이지<br>템플릿 제공</b></li>
+                            <li class="animate fadeDown delay5"><span><img src="./images/img_section2_1_5.png" alt=""></span><b>장난감/도서<br>대여 연동</b></li>
+                        </ul>
+                   </div>
+                   <div class="mainInfo2">
+                        <ul>
+                            <li class="animate fadeRight delay5"><span><img src="./images/img_section2_2_1.png" alt=""></span><b>콘텐츠 관리 시스템</b></li>
+                            <li class="animate fadeDown delay5"><span><img src="./images/img_section2_2_2.png" alt=""></span><b>모바일웹 지원</b></li>
+                            <li class="animate fadeLeft delay5"><span><img src="./images/img_section2_2_3.png" alt=""></span><b>온라인 결제 연동</b></li>
+                            <li class="animate fadeRight delay5"><span><img src="./images/img_section2_2_4.png" alt=""></span><b>뉴스레터 제작</b></li>
+                            <li class="animate fadeUp delay5"><span><img src="./images/img_section2_2_5.png" alt=""></span><b>SSL 적용</b></li>
+                            <li class="animate fadeLeft delay5"><span><img src="./images/img_section2_2_6.png" alt=""></span><b>홈페이지 호스팅</b></li>
+                        </ul>
+                   </div>
+               </div>
+           </div>
+           <div id="section3" class="section section3">
+                <div class="inner">
+                    <h3 class="animate fadeUp">구축사례</h3>
+                    <div class="tabContent animate fadeUp">
+                        <ul class="tabBar">
+                            <li><a href="">전체</a></li>
+                            <li><a href="">육아종합지원센터</a></li>
+                            <li><a href="">장난감도서관</a></li>
+                            <li><a href="">아이맘카페</a></li>
+                            <li><a href="">모바일앱</a></li>
+                        </ul>
+                        <div class="tabPage active animate fadeUp delay2">
+                            <div class="mainPortfolio">
+                                <ul>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">경남창원시육아종합지원센터</b></a></li>
+                                </ul>
+                            </div>
+                            <div class="paging">
+                                <a href="" class="first">처음페이지</a>
+                                <a href="" class="prev">이전페이지</a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="" class="next">다음페이지</a>
+                                <a href="" class="last">마지막페이지</a>
+                            </div>
+                        </div>
+                        <div class="tabPage">
+                            <div class="mainPortfolio">
+                                <ul>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">의왕시육아종합지원센터</b></a></li>
+                                </ul>
+                            </div>
+                            <div class="paging">
+                                <a href="" class="first">처음페이지</a>
+                                <a href="" class="prev">이전페이지</a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="" class="next">다음페이지</a>
+                                <a href="" class="last">마지막페이지</a>
+                            </div>
+                        </div>
+                        <div class="tabPage">
+                            <div class="mainPortfolio">
+                                <ul>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">안양시육아종합지원센터</b></a></li>
+                                </ul>
+                            </div>
+                            <div class="paging">
+                                <a href="" class="first">처음페이지</a>
+                                <a href="" class="prev">이전페이지</a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="" class="next">다음페이지</a>
+                                <a href="" class="last">마지막페이지</a>
+                            </div>
+                        </div>
+                        <div class="tabPage">
+                            <div class="mainPortfolio">
+                                <ul>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산수영구육아종합지원센터</b></a></li>
+                                </ul>
+                            </div>
+                            <div class="paging">
+                                <a href="" class="first">처음페이지</a>
+                                <a href="" class="prev">이전페이지</a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="" class="next">다음페이지</a>
+                                <a href="" class="last">마지막페이지</a>
+                            </div>
+                        </div>
+                        <div class="tabPage">
+                            <div class="mainPortfolio">
+                                <ul>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase1.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                    <li><a href=""><span><img src="./images/img_mainCase2.jpg" alt=""></span><b class="title">부산북구육아종합지원센터</b></a></li>
+                                </ul>
+                            </div>
+                            <div class="paging">
+                                <a href="" class="first">처음페이지</a>
+                                <a href="" class="prev">이전페이지</a>
+                                <a href="" class="active">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">5</a>
+                                <a href="" class="next">다음페이지</a>
+                                <a href="" class="last">마지막페이지</a>
+                            </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+           <div id="section4" class="section section4">
+               <div class="inner">
+                   <h3 class="animate fadeUp">홈페이지 구축 과정</h3>
+                   <p class="desc animate fadeUp">상담부터 시안, 설계, 개발, 테스트에 걸친 전 과정을 전문가가 제작합니다.</p>
+                   <div class="mainStep animate fadeUp delay">
+                       <ul>
+                           <li><span><img src="./images/icon_homepage1.png" alt=""></span><b>상담</b></li>
+                           <li><span><img src="./images/icon_homepage2.png" alt=""></span><b>디자인 시안</b></li>
+                           <li><span><img src="./images/icon_homepage3.png" alt=""></span><b>상세 설계</b></li>
+                           <li><span><img src="./images/icon_homepage4.png" alt=""></span><b>개발/테스트</b></li>
+                           <li><span><img src="./images/icon_homepage5.png" alt=""></span><b>홈페이지 오픈</b></li>
+                       </ul>
+                   </div>
+                   <div class="mainStepBox animate fadeUp delay">
+                       <ul>
+                           <li>홈페이지 구축 시 기능 요구사항에 따라 2~3개월이 소요됩니다.</li>
+                           <li>상담 시 홈페이지 디자인과 사용할 기능(프로그램)을 협의합니다.</li>
+                           <li>홈페이지 오픈 후 유지보수를 지원합니다.</li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+           <div id="section5" class="section section5">
+               <div class="inner">
+                   <h3 class="animate fadeUp">토탈 유지보수 서비스 제공</h3>
+                   <p class="desc animate fadeUp">신속, 정확한 유지보수 서비스 제공을 약속합니다.</p>
+                   <div class="mainService">
+                       <ul>
+                           <li><span class="animate fadeIn"><img src="./images/icon_serviceList1.jpg" alt=""></span><b>팝업, 팝업존 제작</b><span class="con">행사, 교육 일정, 지원 정책 홍보 등 홈페이지<br>
+                            공지가 필요한 부분에 대한 이미지 작업 지원</span></li>
+                           <li><span class="animate fadeIn delay"><img src="./images/icon_serviceList2.jpg" alt=""></span><b>콘텐츠 수정</b><span class="con">법, 제도 변경, 조직 변경 등<br>
+                            변경사항 발생 시 콘텐츠 수정 지원</span></li>
+                           <li><span class="animate fadeIn delay2"><img src="./images/icon_serviceList3.jpg" alt=""></span><b>기능 수정</b><span class="con">행사/교육 신청, 각종 서비스<br>
+                            신청 관련 운영정책 변경 시 기능 수정 지원</span></li>
+                           <li><span class="animate fadeIn delay"><img src="./images/icon_serviceList4.jpg" alt=""></span><b>보안 점검 대응</b><span class="con">정기, 비정기 보안점검 결과<br>
+                            취약점 발견 시 보완 조치</span></li>
+                           <li><span class="animate fadeIn delay2"><img src="./images/icon_serviceList5.jpg" alt=""></span><b>홈페이지 호스팅</b><span class="con">홈페이지가 웹에서 정상적으로<br>
+                            서비스될 수 있도록 호스팅 관리</span></li>
+                           <li><span class="animate fadeIn delay3"><img src="./images/icon_serviceList6.jpg" alt=""></span><b>기타</b><span class="con">센터에서 홈페이지 운영관련<br>
+                            요청하는 사항 대응</span></li>
+                       </ul>
+                   </div>
+                   <p class="desc2">※ 유지보수 계약 별도 체결 시</p>
+               </div>
+            </div>
+            <div id="section6" class="section section6">
+                <div class="inner">
+                    <h3 class="animate fadeUp">Contact US</h3>
+                    <div class="contactTitle animate fadeUp">
+                        <p>홈페이지 구축관련 문의사항이 있으신가요?<br>
+                            아래 문의처로 연락 주시면 친절하게 상담해드립니다.
+                        </p>
+                        <div><a href="#1">소개서 다운로드</a><a href="#modal_policy" class="btn_modalOpen">유지보수 정책</a><a href="#modal_newsletter" class="btn_modalOpen">뉴스레터 제작</a></div>
+                    </div>
+                    <div id="modal_policy" class="modalWrap wide">
+                        <div class="modalTitle">
+                            <h2>홈페이지 주요 메뉴</h2>
+                            <a href="#" class="btn_modalClose">닫기</a>
+                         </div>
+                        <div class="modalContent">
+                            <div class="tableBox">
+                                <table class="list small">
+                                    <caption>연락처 목록표</caption>
+                                    <colgroup>
+                                        <col style="width:28%;">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">기본형</th>
+                                            <th scope="col">일반형</th>
+                                            <th scope="col">고급형</th>
+                                            <th scope="col">프리미엄형</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">월납(연납시 할인)</th>
+                                            <td>20만원(VAT별도)</td>
+                                            <td>30만원(VAT별도)</td>
+                                            <td>40만원(VAT별도)</td>
+                                            <td rowspan="9">협의</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">팝업/배너</th>
+                                            <td>2회/월</td>
+                                            <td>3회/월</td>
+                                            <td>4회/월</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">페이지제작(메뉴추가)</th>
+                                            <td>1회/월</td>
+                                            <td>2회/월</td>
+                                            <td>3회/월</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">텍스트수정</th>
+                                            <td>무제한</td>
+                                            <td>무제한</td>
+                                            <td>무제한</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">게시판추가(공통게시판)</th>
+                                            <td>1회/월</td>
+                                            <td>2회/월</td>
+                                            <td>3회/월</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">프로그램하자</th>
+                                            <td>무제한</td>
+                                            <td>무제한</td>
+                                            <td>무제한</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">SNS게시물공유</th>
+                                            <td>1건 지원</td>
+                                            <td>2건 지원</td>
+                                            <td>2건 지원</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">DB백업</th>
+                                            <td>무상 지원(최근 3일)</td>
+                                            <td>무상 지원(최근 3일)</td>
+                                            <td>무상 지원(최근 3일)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">호스팅지원</th>
+                                            <td>5GB</td>
+                                            <td>5GB</td>
+                                            <td>5GB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal_newsletter" class="modalWrap wide">
+                        <div class="modalTitle">
+                            <h2>홈페이지 주요 메뉴</h2>
+                            <a href="#" class="btn_modalClose">닫기</a>
+                         </div>
+                        <div class="modalContent">
+                            <div class="tableBox">
+                                <table class="list small">
+                                    <caption>연락처 목록표</caption>
+                                    <colgroup>
+                                        <col style="width:28%;">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">2,000자 이내</th>
+                                            <th scope="col">2,000자 이상</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">비용</th>
+                                            <td>20만원(VAT별도)</td>
+                                            <td>추가 1,000자당 10만원(VAT별도)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">비쥬얼이미지</th>
+                                            <td colspan="2">분기별로 별도 제작가능(원본파일 제공불가)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">템플릿디자인</th>
+                                            <td colspan="2">매회 디자인 변경 불가, 추가비용 발생</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tableBox animate fadeUp delay2">
+                        <table class="list">
+                            <caption>연락처 목록표</caption>
+                            <colgroup>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">홈페이지 단독 구축</th>
+                                    <th scope="col">홈페이지 + 아이러브맘카페<br>통합 구축</th>
+                                    <th scope="col">홈페이지, 아이러브맘카페 <br>별도 구축</th>
+                                    <th scope="col">유지보수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제작 기간</th>
+                                    <td>홈페이지 콘텐츠 <br>접수 완료 후 1.5개월</td>
+                                    <td>홈페이지 콘텐츠 <br>접수 완료 후 2개월</td>
+                                    <td>홈페이지 콘텐츠 <br>접수 완료 후 2.5~3개월</td>
+                                    <td>계약기간 중<br>상시 유지보수</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">소요 비용</th>
+                                    <td>별도 문의</td>
+                                    <td>별도 문의</td>
+                                    <td>별도 문의</td>
+                                    <td>별도 문의</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의처</th>
+                                    <td colspan="4" class="left">
+                                        <p>
+                                            <b>홈페이지 구축/운영 상담/견적 문의</b><br>
+                                            - 백승엽 부장 : 010-3264-5209, info100@injeinc.co.kr
+                                        </p>
+                                        <b>* 기술 문의 : 안종규 부장, 070-4609-6333(305), <span>ajk@injeinc.co.kr</span></b>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+       </div> 
+       <div id="footer">
+           <div class="inner">
+               <span><img src="./images/logo_footer.png" alt="인재INC"></span>
+               <div class="address">
+                본사 : 서울시 구로구 디지털로 33길 12, 1301호, 1302호 (구로동, 우림이비즈센터2차)<br>
+                대전지사 : 대전시 서구 둔산대로117번길 66, 909호 (만년동, 골드벤처타워)
+                <b>Copyrightⓒ INJEINC 2022. All Rights Reserved.</b>
+               </div>
+            </div>
+       </div> 
+       <div id="overlay"></div>
+    </div>
+</body>
+</html>

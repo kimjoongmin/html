@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-6. 웹 페이지의 레이아웃 구성하기</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script>
+        $(document).ready(function(){
+            let $slick = $(".testimonial-slide");
+            $slick.slick({
+                arrows : false,
+            });
+            $(".prev-btn").click(function(){
+                $slick.slick("slickPrev");
+            });
+            $(".next-btn").click(function(){
+                $slick.slick("slickNext");
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- <h1><a href="/"><img src="/images/logo.png" alt="logo"></a></h1> -->
+            <h1><a href="/">Acme</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="">home</a> / <a href="">about</a></li>
+                    <li><a href="#" class="btn light-bg light-txt"><span class="material-symbols-outlined">lock</span>Sign in</a></li>
+                    <li><a href="#" class="btn highlight-bg highlight-txt">Sign up for free</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner con-top-pd">
+        <h2 class="banner-tt">Portfolio Manager</h2>
+        <h3>It's awesome. And it's FREE!</h3>
+        <p><a href="" class="btn highlight-bg highlight-txt big">Sign up for free</a></p>
+        <img src="/images/banner.png" alt="">
+    </section>
+    <section class="feature container con-pd">
+        <ul>
+            <li>
+                <span class="icon"><span class="material-symbols-outlined">person</span></span>
+                <h3>This is Feature Title</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus voluptatem consectetur veritatis dolor. Exercitationem deleniti totam, amet tempora debitis odio est modi magni cumque natus! Fuga saepe blanditiis inventore.</p>
+            </li>
+            <li>
+                <span class="icon"><span class="material-symbols-outlined">list</span></span>
+                <h3>This is Feature Title</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus voluptatem consectetur veritatis dolor. Exercitationem deleniti totam, amet tempora debitis odio est modi magni cumque natus! Fuga saepe blanditiis inventore.</p>
+            </li>
+            <li>
+                <span class="icon"><span class="material-symbols-outlined">star</span></span>
+                <h3>This is Feature Title</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus voluptatem consectetur veritatis dolor. Exercitationem deleniti totam, amet tempora debitis odio est modi magni cumque natus! Fuga saepe blanditiis inventore.</p>
+            </li>
+        </ul>
+        <span class="material-symbols-outlined prev-btn">chevron_left</span>
+        <span class="material-symbols-outlined next-btn">chevron_right</span>
+            
+    </section>
+    <section class="testimonial container con-pd">
+        <ul class="testimonial-slide">
+            <li>
+                <blockquote>
+                    <p>1adios ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio, quibusdam aspernatur maiores fuga excepturi sunt eaque exercitationem ipsa. Mollitia sapiente atque nihil qui. Veritatis fuga dolorum sunt eos illo.</p>
+                    <small>adi, designer</small>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote>
+                    <p>2adios ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio, quibusdam aspernatur maiores fuga excepturi sunt eaque exercitationem ipsa. Mollitia sapiente atque nihil qui. Veritatis fuga dolorum sunt eos illo.</p>
+                    <small>adi, designer</small>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote>
+                    <p>3adios ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio, quibusdam aspernatur maiores fuga excepturi sunt eaque exercitationem ipsa. Mollitia sapiente atque nihil qui. Veritatis fuga dolorum sunt eos illo.</p>
+                    <small>adi, designer</small>
+                </blockquote>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="cta con_pd">
+            <h2 class="content-tt">Creat your free</h2>
+            <p class="content-desc">qweqwe qweqweqwe qweqweqwe</p>
+            <a href="" class="btn highlight-bg highlight-txt">Sign up for free</a>
+        </div>
+        <div class="copylight con-pd">
+            <p>(c)2022 All right reserved.</p>
+            <p>Questions? Email us at <a href="" class="hightlight-txt link">office@product.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

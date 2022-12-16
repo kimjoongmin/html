@@ -1,0 +1,103 @@
+@charset 'utf-8';
+
+@font-face{
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url(./fonts/NanumGothic-Regular.eot);
+	src: url(./fonts/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+		 /* url(./fonts/NanumGothic-Regular.woff2) format('woff2'), */
+		 url(./fonts/NanumGothic-Regular.woff) format('woff');
+}
+@font-face{
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 700;
+	src: url(./fonts/NanumGothic-Bold.eot);
+	src: url(./fonts/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+		 /* url(./fonts/NanumGothic-Bold.woff2) format('woff2'), */
+		 url(./fonts/NanumGothic-Bold.woff) format('woff');
+}
+body,input,textarea,select,button,table{font-family:'Nanum Gothic';}
+
+/* ======================================== Reset ======================================== */
+*{-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+html,body{width:100%;height:100%;-webkit-font-smoothing:antialiased;box-sizing:border-box;}
+body,p,h1,h2,h2,h3,h4,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,pre{margin:0;padding:0;}
+body{font-size:14px;font-weight:400;color:#333;}
+ul,ol,li{display:block;list-style:none;}
+img{border:0px none;}
+img,input,button,label,select{vertical-align:middle;}
+input[type='text'],input[type='password'],input[type='number']{text-indent:5px;}
+input[type='submit'],input[type='button'],button{cursor:pointer;}
+i,em,address{font-style:normal;}
+a{text-decoration:none;color:#111;}
+a:hover{text-decoration:none;}
+table{border-spacing:0;table-layout:fixed;}
+article,aside,hgroup,header,footer,figure,figcaption,nav,section{display:block;}
+.inner{display:block;position:relative;margin:0 auto;width:1400px;box-sizing:border-box;}
+.inner:after{display:block;content:'';clear:both;}
+caption, .soundOnly{display:block !important;position:absolute !important;top:-9999px !important;}
+
+.w10{width:10px}.w20{width:20px}.w30{width:30px}.w40{width:40px}.w50{width:50px}.w60{width:60px}.w70{width:70px}.w80{width:80px}.w90{width:90px}.w100{width:100px}.w110{width:110px}.w120{width:120px}.w130{width:130px}.w140{width:140px}.w150{width:150px}.w160{width:160px}.w170{width:170px}.w180{width:180px}.w190{width:190px}.w200{width:200px}.w210{width:210px}.w220{width:220px}.w230{width:230px}.w240{width:240px}.w250{width:250px}.w260{width:260px}.w270{width:270px}.w280{width:280px}.w290{width:290px}.w300{width:300px}.w310{width:310px}.w320{width:320px}.w330{width:330px}.w340{width:340px}.w350{width:350px}.w360{width:360px}.w370{width:370px}.w380{width:380px}.w390{width:390px}.w400{width:400px}.w410{width:410px}.w420{width:420px}.w430{width:430px}.w440{width:440px}.w450{width:450px}.w460{width:460px}.w470{width:470px}.w480{width:480px}.w490{width:490px}.w500{width:500px}.w510{width:510px}.w520{width:520px}.w530{width:530px}.w540{width:540px}.w550{width:550px}.w560{width:560px}.w570{width:570px}.w580{width:580px}.w590{width:590px}.w600{width:600px}.w610{width:610px}.w620{width:620px}.w630{width:630px}.w640{width:640px}.w650{width:650px}.w660{width:660px}.w670{width:670px}.w680{width:680px}.w690{width:690px}.w700{width:700px}
+.w15{width:15px}.w25{width:25px}.w35{width:35px}.w45{width:45px}.w55{width:55px}.w65{width:65px}.w75{width:75px}.w85{width:85px}.w90{width:95px}
+.w5p{width:5%}.w8p{width:8%}.w10p{width:10%}.w12p{width:12%}.w15p{width:15%}.w18p{width:18%}.w20p{width:20%}.w25p{width:25%}.w30p{width:30%}.w35p{width:35%}.w40p{width:40%}.w45p{width:45%}.w48p{width:48%}.w49p{width:49%}.w50p{width:50%}.w55p{width:55%}.w60p{width:60%}.w65p{width:65%}.w70p{width:70%}.w75p{width:75%}.w80p{width:80%}.w85p{width:85%}.w90p{width:90%}.w95p{width:95%}.w100p{width:99.9%}
+.h10{height:10px}.h20{height:20px}.h20{height:30px}.h30{height:40px}.h40{height:50px}.h60{height:60px}.h70{height:70px}.h80{height:80px}.h90{height:90px}.h100{height:100px}.h110{height:110px}.h120{height:120px}.h130{height:130px}.h140{height:140px}.h150{height:150px}.h160{height:160px}.h170{height:170px}.h180{height:180px}.h190{height:190px}.h200{height:200px}.h210{height:210px}.h220{height:220px}.h230{height:230px}.h240{height:240px}.h250{height:250px}.h260{height:260px}.h270{height:270px}.h280{height:280px}.h290{height:290px}.h200{height:300px}.h210{height:310px}.h220{height:320px}.h230{height:330px}.h240{height:340px}.h250{height:350px}.h260{height:360px}.h270{height:370px}.h280{height:380px}.h290{height:390px}.h300{height:400px}.h310{height:410px}.h320{height:420px}.h330{height:430px}.h340{height:440px}.h350{height:450px}.h360{height:460px}.h370{height:470px}.h380{height:480px}.h390{height:490px}.h400{height:500px}.h410{height:510px}.h420{height:520px}.h430{height:530px}.h440{height:540px}.h450{height:550px}.h460{height:560px}.h470{height:570px}.h480{height:580px}.h490{height:590px}.h600{height:600px}.h610{height:610px}.h620{height:620px}.h630{height:630px}.h640{height:640px}.h650{height:650px}.h660{height:660px}.h670{height:670px}.h680{height:680px}.h690{height:690px}.h700{height:700px}
+
+input[type='text'],input[type='password'],input[type='number'],select{height:30px;max-width:100%;text-indent:5px;border:1px #ddd solid;box-sizing:border-box;}
+textarea{padding:5px;border:1px #ddd solid;box-sizing:border-box;resize:vertical;}
+*:disabled,*:readonly{color:#777 !important;background:#eee !important;}
+input[type='checkbox'],input[type='radio']{margin-right:5px;}
+
+/* .tabBar{height:39px;margin-bottom:20px;border-bottom:1px solid #666;}
+.tabBar:after{display:block;content:"";clear:both;}
+.tabBar > li{position:relative;float:left;margin-right:-1px;z-index:1;}
+.tabBar > li > a{display:block;height:38px;line-height:38px;padding:0 25px;color:#777;border:1px solid #ddd;border-bottom:1px solid #666;background-color:#fff;}
+.tabBar > li.active{z-index:2;}
+.tabBar > li.active > a{color:#111;font-weight:bold;border:1px solid #666;border-bottom:1px solid #fff;} */
+.tabPage{display:none;}
+.tabPage.active{display:block;}
+
+.btnArea{margin:20px 0;text-align:center;}
+.btnArea.right{text-align:right;}
+.btnArea.left{text-align:left;}
+
+.modalWrap{position:absolute;top:100px;left:50%;transform:translateX(-50%);width:700px;padding:30px 50px 50px 50px;background:#fff;opacity:0;z-index:-1;visibility: hidden; transition-duration:0.5s;border-top-left-radius:20px;border-bottom-right-radius:20px;box-sizing:border-box;}
+.modalWrap.active{top:130px;opacity:1;z-index:9;visibility:visible}
+.modalWrap.small{width:580px;}
+.modalWrap.wide{width:1200px;}
+.modalWrap.window{position:relative;top:inherit;left:inherit;margin-left:0;padding-top:46px;width:auto;opacity:1;z-index:99;}
+.modalWrap.window .modalTitle{position:fixed;top:0;left:0;right:0;}
+.modalWrap .modalTitle{position:relative;margin-bottom:30px;}
+.modalWrap .modalTitle h2{font-size:30px;line-height:60px;border-bottom:1px dashed #333;}
+.modalWrap > .modalContent > .btn_modalClose{display:block;position:absolute;top:0;right:0;width:46px;height:46px;;font-size:40px;text-align:center;line-height:30px;}
+.modalWrap .modalContent{position:relative;}
+.modalWrap .modalContent .tableBox table tbody th,
+.modalWrap .modalContent .tableBox table tbody td{padding:10px;}
+.modalWrap .modalContent .btnArea + *{margin-top:20px;}
+.modalWrap.pwWrap{padding:50px 75px 30px;font-size:20px;}
+.modalWrap.pwWrap .boardTitle{padding-bottom:0;}
+.btn_modalClose{position:absolute;right:0;top:50%;transform: translateY(-50%);width:37px;height:37px;background:url(../images/btn_modalClose.png) no-repeat;text-indent:-9999px;}
+.modalWrap .btn{padding:15px 50px;background:#ff6abe;border-top-left-radius:10px;border-bottom-right-radius:10px;color:#fff;font-size:18px;}
+
+#overlay{display:none;position:fixed;top:90px;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);transition: all 0.3s ease;}
+#overlay.active{display:block;z-index:2;}
+
+/* animate */
+.animate{opacity:0;transition:0.5s ease;}
+.animate.on{opacity:1;transform:scale(1) rotate(0) translate(0,0);}
+.delay{transition-delay:0.2s;}
+.delay2{transition-delay:0.4s;}
+.delay3{transition-delay:0.6s;}
+.delay4{transition-delay:0.8s;}
+.delay5{transition-delay:1s;}
+.fadeUp{transform: translateY(80px);}
+.fadeDown{transform: translateY(-80px);}
+.fadeRight{transform: translateX(-80px);}
+.fadeLeft{transform: translateX(80px);}
+
+
+/*Mobile*/
+@media all and (max-width:1024px){
+	.inner{width:auto;}
+}

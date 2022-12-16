@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* ************** font ************** */
+@font-face{
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/NanumSquareR.eot);
+  src: url(./fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+       /* url(./fonts/NanumSquareR.woff2) format('woff2'), */
+       url(./fonts/NanumSquareR.woff) format('woff'),
+	   url(./fonts/NanumSquareR.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 700;
+  src: url(./fonts/NanumSquareB.eot);
+  src: url(./fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+       /* url(./fonts/NanumSquareB.woff2) format('woff2'), */
+       url(./fonts/NanumSquareB.woff) format('woff'),
+	   url(./fonts/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 800;
+ src: url(./fonts/NanumSquareEB.eot);
+ src: url(./fonts/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+      url(./fonts/NanumSquareEB.woff2) format('woff2'),
+	  url(./fonts/NanumSquareEB.woff) format('woff'),
+      url(./fonts/NanumSquareEB.ttf) format('truetype');
+}
+
+/* ************** reset ************** */
+*{-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+body{-webkit-font-smoothing:antialiased;font-family:'NanumSquare', sans-serif;font-size:16px;font-weight:400;color:#333;letter-spacing:-0.5px;word-break:break-all;}
+body,p,h1,h2,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,pre{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+ul,ol,li{display:block;list-style:none;}
+img{border:0px none;max-width:100%;}
+img,input,button,label,select{vertical-align:middle;}
+input[type='text'],input[type='password'],input[type='number'],select{padding-left:5px;}
+input[type='submit'],input[type='button'],button{cursor:pointer;overflow:visible;}
+i,em,address{font-style:normal;}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:none;}
+table{border-spacing:0;table-layout:fixed;width:100%;}
+table table{width:auto;}
+caption{overflow:hidden;width:1px;height:1px;padding:0;margin-top:-1px;font-size:0;line-height:0;text-indent:-9999px;}
+.han{font-family:'MalgunGothic', sans-serif;letter-spacing:-1px;}
+
+/* ************** common ************** */
+.inner{display:block;position:relative;margin:0 auto;width:1200px;box-sizing:border-box;}
+.inner:after{display:block;content:'';clear:both;}
+.soundOnly{display:block !important;position:absolute !important;top:-9999px !important;}
+.mobileOnly{display:none;}
+.alignLeft{text-align:left;}
+.alignCenter{text-align:center;}
+.alignRight{text-align:right;}
+
+/* layout */
+#header{position:fixed;top:0;right:0;left:0;border-bottom:1px solid #ddd;background:#fff;box-shadow: 0 1px 5px rgba(0,0,0,0.2);z-index:9;}
+#header h1{position:absolute;left:0;top:50%;transform: translateY(-57%);}
+#header h1 a{display:block;}
+#header .sihas{position:absolute;top:36px;right:90px;}
+#header .sihas:after{display:block;content:"";position:absolute;right:0;top:1px;width:15px;height:13px;background:url(../images/main/icon_btnSiteGo.png) 0 0 no-repeat;}
+#header .sihas a{padding-right:18px;}
+#header .lang{position:absolute;top:36px;right:0;}
+#gnb{width:800px;height:88px;margin:0 auto;padding-right:50px;}
+#gnb > ul{display:flex;justify-content:center;}
+#gnb > ul > li{width:20%;text-align:center;}
+#gnb > ul > li > a{display:block;line-height:88px;font-size:20px;font-weight:700;}
+#gnb > ul > li > ul{display:none;}
+
+/* main */
+.section{width:100%;height:800px;}
+.sec1{height:100vh}

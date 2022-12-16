@@ -1,0 +1,12 @@
+#result{
+  display: none;
+width:80%;background:whitesmoke;text-align:center;border-radius:20px;}
+.resultDesc{font-size:1.4rem;word-break: keep-all;}
+.kakao{background:#fee500;color:#fff;border:0;font-size:1.2rem;border-radius: 20px;}
+
+
+.kakao:hover,
+.kakao:focus{background-color:white;color:#fee500;}
+
+.answerGroup{border:1px solid #ddd;background-color: white;border-radius: 20px;}
+.answerGroup li{list-style:none;font-size:13px;text-align:left;text-indent:-20px;padding:2px 0; }
