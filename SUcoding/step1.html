@@ -1,13 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>1장</title>
 </head>
+
 <body>
-  <div class="blue"></div>
+  <pre>
+    *vs code 확장
+
+    *html 기본 구성
+
+    *실무에서 자주 사용하는 HTML 필수 태그
+
+  </pre>
+  <p> hn 태그 </p>
+  <h1>한번만~</h1>
+  <h2>쭉쭉~</h2>
+
+  <p> p문장 단락 태그 </p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptate voluptas, quam autem non, harum repellat aut hic magni ducimus exercitationem assumenda, est eligendi. Delectus ex possimus exercitationem distinctio cupiditate?</p>
+
+  <p> 줄바꿈 </p>
+  <br>
+
+  <p> blockquote : 문장단위로 인용문 </p>
+  <blockquote cite="주소">인용된 내용을 작성</blockquote>
+  <p> q : 짧은단위로 인용문 </p>
+  <q>인용된 내용을 작성</q>
+
+  <p> ins(추가), del(삭제)되는 내용의 태그 </p>
+  <ins>추가되는 내용입니다</ins>
+  <del>삭제되는 내용입니다</del>
+
+  <p> sub(위첨자), sup(위첨자) 태그 </p>
+  <p>H<sub>2</sub>O</p>
+  <p>2<sup>16</sup></p>
+
+  <p> 그룹 div, span </p>
+
+  <p> ul, ol, dl 목록 형태의 태그</p>
+  <p> li </p>
+  <dl>
+    <dt>HTML</dt>
+    <dl>HTML은 HyperText Markup Language 의 약자이다</dl>
+    <dt>CSS</dt>
+    <dl>CSS는 Cascading Style Sheets 의 약자이다</dl>
+  </dl>
+
+  <p> a 태그 </p>
+  <p> img 태그 </p>
+
+  <p> strong 문장 강조, em 태그는 단어 강조 </p>
+  <p> b,i 태그는 이제 사용안함 </p>
+
+  <h2>Form</h2>
+  <form action="어떤서버로" method="어떠한전송타입으로~">
+    <label for="id">아이디</label> : <input type="text" name="" id="id">
+    <label>아이디 : <input type="text" name=""></label>
+    <input type="checkbox" name="" id="">
+  
+    <p> 상호작용 정보를 그룹화 </p>
+    <fieldset>
+      <p> 필드셋 이름 설명 </p>
+      <legend>필수 입력 정보</legend>
+    </fieldset>
+    <fieldset>
+      <legend>선택 입력 정보</legend>
+    </fieldset>
+  
+    <textarea name="" id="" ></textarea>
+
+    <select name="" id="" size="" multiple title="">
+      <option value="" selected></option>
+      <option value=""></option>
+      <option value=""></option>
+    </select>
+
+    <button></button>
+
+    공통속성
+    disabled
+    readonly
+    maxlength
+    checked
+    placeholder
+
+  </form>
+
+  <h2>테이블</h2>
+
+  <h2>멀티미디어 태그</h2>
+
+  <audio src="" controls>
+    
+    <p> 그래서 source 태그를 자식으로 사용 </p>
+    <source src="" type="audio/mp3">
+    <source src="" type="audio/wav">
+    지원하지 않는 브라우저 입니다.
+  </audio>
+  <br>
+  <video src="./sample.mp4" controls>
+
+  </video>
+  <p> 단점 : 웹브라우저마다 지원하지 않는 확장자 많음 </p>
+
+  <h2>시맨틱 태그</h2>
+  <p>의미있는 태그 사용 권장</p>
+  <header>header 상단</header>
+  <nav>nav 메뉴</nav>
+  <section>section 논리영역 hn태그를 반드시 하나 이상 사용해야함~</section>
+  <article>article 독립적 컨텐츠</article>
+  <aside>aside 로그인,광고배너 우측사이드 영역에 정도</aside>
+  <footer>footer 하단</footer>
+  <main>main 주요부분</main>
+  <figure>figure img감싸서 figcaption</figure>
+
+  <h2>글로벌 속성</h2>
+  <p class="" id="" style="" title="" lang="" hidden data-아무거나=""></p>
+
 </body>
+
 </html>
