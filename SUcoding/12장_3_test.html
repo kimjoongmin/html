@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      flex-flow: wrap;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    .checkbox-group input[type='checkbox'] {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      appearance: none;
+      -webkit-appearance: none;
+      padding-left: 25px;
+      border: 0;
+    }
+
+    .checkbox-group input[type='checkbox']:before {
+      display: inline-flex;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+      border: 1px solid #aaa;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+    }
+
+    .checkbox-group input[type='checkbox']:checked:before {
+      background: #336699 url(./images/i_checkbox_on.svg) center center no-repeat;
+      border: 0;
+    }
+
+
+
+    .radio-group {
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      flex-flow: wrap;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    .radio-group input[type='radio'] {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      appearance: none;
+      -webkit-appearance: none;
+      padding-left: 25px;
+      border: 0;
+    }
+
+    .radio-group input[type='radio']:before {
+      display: inline-flex;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+    }
+
+    .radio-group input[type='radio']:checked:before {
+      background: #336699;
+      border: 0;
+    }
+
+    .radio-group input[type='radio']:checked:after {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      display: inline-flex;
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      background: #336699;
+      box-sizing: border-box;
+    }
+
+    .bg-change-box {
+      border: 3px solid #aaa;
+      text-align: center;
+      padding: 40px 0;
+      background-color: #fff;
+    }
+
+    input[type='text'],
+    input[type='password'] {
+      display: block;
+      border: 1px solid #ddd;
+      height: 30px;
+      border-radius: 5px;
+      text-indent: 5px;
+      margin: 2px 0;
+    }
+
+    pre {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <pre>- 클릭시 이벤트 취소</pre>
+  <a class="link" href="https://wwww.naver.com">네이버 이동</a>
+  <a class="link" href="https://wwww.daum.net">다음 이동</a>
+  <script>
+    const aLinks = document.querySelectorAll(".link");
+    aLinks.forEach((el) => {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+      })
+    })
+
+  </script>
+
+  <pre>- input에서 키다운했을때 키코드 및 키 입력을 boolean으로~</pre>
+  <form action="">
+    <input type="text" name="key" id="">
+  </form>
+  <script>
+    const inputKey = document.querySelector("input[name='key']");
+    inputKey.addEventListener("keydown", (e) => {
+      console.log(`keyCode : ${e.keyCode}`)
+      console.log(`ctrlKey : ${e.ctrlKey}`)
+      console.log(`altKey : ${e.altKey}`)
+      console.log(`shiftKey : ${e.shiftKey}`)
+    })
+  </script>
+
+
+
+  <pre>- 클릭하면 빨강 또 클릭하면 검정</pre>
+  <p>text-1</p>
+  <p>text-2</p>
+  <p>text-3</p>
+  <script>
+    const pEls = document.querySelectorAll("p");
+    pEls.forEach(el => {
+      el.style.cursor = "pointer";
+      el.addEventListener("click", (e) => {
+        if (e.target.style.color === "red") {
+          e.target.style.color = "black"
+        } else {
+          e.target.style.color = "red"
+        }
+      })
+    })
+  </script>
+
+  <pre>- 클릭시 pointerEvent 객체 속성 출력</pre>
+  <button class="event">PointerEvent 객체 클릭</button>
+  <script>
+    const btnEvent = document.querySelector(".event");
+    btnEvent.onclick = (e) => {
+      console.log("== PointerEvent 객체 속성 출력 시작 ==");
+      console.log(`clientX : ${e.clientX}`);
+      console.log(`clientY : ${e.clientY}`);
+      console.log(`pageX : ${e.pageX}`);
+      console.log(`pageY : ${e.pageY}`);
+      console.log(`screenX : ${e.screenX}`);
+      console.log(`screenY : ${e.screenY}`);
+      console.log("== PointerEvent 객체 속성 출력 끝 ==");
+    }
+  </script>
+
+
+  <pre>- PointerEvent 객체 보기</pre>
+  <button class="btn2">클릭 : PointerEvent</button>
+  <script>
+    const btnPointerEvent = document.querySelector(".btn2");
+    btnPointerEvent.addEventListener("click", function (e) {
+      //이벤트 객체
+      console.log("이벤트 객체 :", e);
+    });
+  </script>
+
+
+  <pre>- 패스워드 다를 경우 확인 메세지 및 form에서 submit 사용방법 및 return</pre>
+
+  <form name="register" action="ok.html" onsubmit="return jbSubmit()">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="pw1" placeholder="Password">
+    <input type="password" name="pw2" placeholder="Confirm Password">
+    <input type="submit" value="가입">
+  </form><br><br><br>
+  <script>
+    function jbSubmit() {
+      const pw1 = document.register.pw1.value;
+      const pw2 = document.register.pw2.value;
+      if (pw1 !== pw2) {
+        alert(`비밀번호와 확인 비밀번호가 다릅니다!`);
+        return false;
+      }
+    }
+  </script>
+
+  <button class="propertyBtn">클릭</button>
+  <script>
+    const btnElw = document.querySelector(".propertyBtn");
+    btnElw.onclick = function () {
+      alert("click");
+    }
+
+    // btnEl.onclick = () => alert("arrow click");
+
+    // btnEl.onclick = clickEvent;
+    // function clickEvent() {
+    //   alert("click");
+    // }
+  </script>
+  <form>
+    <select>
+      <option value="apple">사과</option>
+      <option value="banana">바나나</option>
+      <option value="orange">오렌지</option>
+      <option value="melon">멜론</option>
+    </select>
+  </form>
+  <form action="">
+    <select class="bgChangeSelect">
+      <option value="">배경선택</option>
+      <option value="blue">blue</option>
+      <option value="red">red</option>
+      <option value="black">black</option>
+    </select>
+  </form>
+  <div class="bg-change-box">
+    Color Box
+  </div>
+  <script>
+    const bgChangeSelect = document.querySelector(".bgChangeSelect");
+    const bgChangeSelectOption = document.querySelectorAll(".bgChangeSelect option");
+    const bgChangeBox = document.querySelector(".bg-change-box");
+    bgChangeSelect.onchange = () => {
+      bgChangeSelectOption.forEach((el) => {
+        el.selected === true ? bgChangeBox.style.backgroundColor = el.value : undefined
+      });
+    }
+    // const changeColor = () => {
+    //   bgChangeSelectOption.forEach((e) => {
+    //     e.selected === true ? bgChangeBox.style.backgroundColor = e.value : undefined
+    //   });
+    // }
+    // bgChangeSelect.addEventListener("change", changeColor);
+
+  </script>
+  <form>
+    <label><input type="checkbox" value="apple"> 사과</label>
+    <label><input type="checkbox" value="banana"> 바나나</label>
+    <label><input type="checkbox" value="orange"> 오렌지</label>
+    <label><input type="checkbox" value="melon"> 멜론</label>
+  </form>
+
+  <form>
+    <label><input type="radio" name="fruits" value="apple"> 사과</label>
+    <label><input type="radio" name="fruits" value="banana"> 바나나</label>
+    <label><input type="radio" name="fruits" value="orange"> 오렌지</label>
+    <label><input type="radio" name="fruits" value="melon"> 멜론</label>
+  </form>
+  <script>
+    const radioEl1 = document.querySelectorAll("input[type='radio']");
+    for (let i = 0; i < radioEl1.length; i++) {
+      (radioEl1[i].checked === true) ? console.log(radioEl1[i].value) : undefined
+    }
+  </script>
+  <div class="checkbox-group">
+    <label>
+      <input type="checkbox" name="" value="">
+      <span>체크박스1</span>
+    </label>
+    <label>
+      <input type="checkbox" name="" value="">
+      <span>체크박스2</span>
+    </label>
+    <label>
+      <input type="checkbox" name="" value="">
+      <span>체크박스3</span>
+    </label>
+  </div>
+  <div class="radio-group">
+    <label>
+      <input type="radio" name="" value="">
+      <span>라디오버튼1</span>
+    </label>
+    <label>
+      <input type="radio" name="" value="">
+      <span>라디오버튼2</span>
+    </label>
+    <label>
+      <input type="radio" name="" value="">
+      <span>라디오버튼3</span>
+    </label>
+  </div>
+
+  <button onclick="clickEvent()">클릭</button>
+  <script>
+    function clickEvent() {
+      alert("클릭");
+    }
+  </script>
+  <form>
+    <input type="text" onfocus="focusEvent()" onblur="blurEvent()" />
+    <script>
+      function focusEvent() {
+        console.log("focus on");
+      }
+      function blurEvent() {
+        console.log("focus out");
+      }
+    </script>
+  </form>
+  <button class="propertyBtn2">propertyBtn2 클릭</button>
+  <script>
+    const btnEl = document.querySelector(".propertyBtn2");
+    btnEl.onclick = () => alert("click2")
+  </script>
+
+  <button class="btn1">더블클릭1</button>
+  <button class="btn11">더블클릭11</button>
+  <script>
+    const btn1 = document.querySelector(".btn1");
+    btn1.ondblclick = () => {
+      alert("안뇽");
+    };
+
+    const btn11 = document.querySelector(".btn11")
+    const dblclick = () => {
+      alert('더블 클릭을 하였습니다')
+    }
+    btn11.addEventListener("dblclick", dblclick)
+  </script>
+</body>
+
+</html>
