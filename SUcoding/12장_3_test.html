@@ -68,22 +68,21 @@
       position: relative;
       width: 18px;
       height: 18px;
+      padding-left: 25px;
       appearance: none;
       -webkit-appearance: none;
-      padding-left: 25px;
-      border: 0;
     }
 
     .radio-group input[type='radio']:before {
-      display: inline-flex;
+      display: inline-block;
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      border-radius: 50%;
-      border: 1px solid #ccc;
       width: 18px;
       height: 18px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
       background: #fff;
     }
 
@@ -93,21 +92,21 @@
     }
 
     .radio-group input[type='radio']:checked:after {
+      display: inline-block;
+      content: "";
       position: absolute;
       top: 1px;
       left: 1px;
-      display: inline-flex;
-      content: "";
       width: 16px;
       height: 16px;
-      border-radius: 50%;
       border: 3px solid #fff;
+      border-radius: 50%;
       background: #336699;
       box-sizing: border-box;
     }
 
     .bg-change-box {
-      border: 3px solid #aaa;
+      border: 2px solid #aaa;
       text-align: center;
       padding: 40px 0;
       background-color: #fff;
@@ -130,37 +129,32 @@
 </head>
 
 <body>
-  <pre>- 클릭시 이벤트 취소</pre>
-  <a class="link" href="https://wwww.naver.com">네이버 이동</a>
-  <a class="link" href="https://wwww.daum.net">다음 이동</a>
+
+  <pre>- 클릭하면 this출력,e.target 출력 / 빨강 또 클릭하면 검정</pre>
+  <p class="btnColor">색 바꾸기1</p>
+  <p class="btnColor">색 바꾸기2</p>
+  <p class="btnColor">색 바꾸기3</p>
   <script>
-    const aLinks = document.querySelectorAll(".link");
-    aLinks.forEach((el) => {
-      el.addEventListener("click", function (e) {
-        e.preventDefault();
+    document.querySelectorAll("p").forEach((el) => {
+      el.addEventListener("click", function () {
+        console.log(this)
+      });
+      //람다 사용할땐 e.target
+      // el.addEventListener("click", (e) => {
+      //   console.log(e.target)
+      // })
+    });
+  </script>
+  <script>
+    const btnColor = document.querySelectorAll(".btnColor");
+    btnColor.forEach((el) => {
+      el.style.cursor = "pointer";
+      el.addEventListener("click", function () {
+        this.style.color === "red" ? this.style.color = "black" : this.style.color = "red";
       })
     })
-
   </script>
-
-  <pre>- input에서 키다운했을때 키코드 및 키 입력을 boolean으로~</pre>
-  <form action="">
-    <input type="text" name="key" id="">
-  </form>
-  <script>
-    const inputKey = document.querySelector("input[name='key']");
-    inputKey.addEventListener("keydown", (e) => {
-      console.log(`keyCode : ${e.keyCode}`)
-      console.log(`ctrlKey : ${e.ctrlKey}`)
-      console.log(`altKey : ${e.altKey}`)
-      console.log(`shiftKey : ${e.shiftKey}`)
-    })
-  </script>
-
-
-
-  <pre>- 클릭하면 빨강 또 클릭하면 검정</pre>
-  <p>text-1</p>
+  <!-- <p>text-1</p>
   <p>text-2</p>
   <p>text-3</p>
   <script>
@@ -175,7 +169,44 @@
         }
       })
     })
+  </script> -->
+
+  <pre>- 클릭시 이벤트 취소</pre>
+  <a href="https://www.naver.com" class="cancelLink" target="_blank">네이버</a>
+  <a href="https://www.daum.com" class="cancelLink" target="_blank">다음</a>
+  <script>
+    document.querySelectorAll(".cancelLink").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+      })
+    })
   </script>
+
+  <!-- <a class="link" href="https://wwww.naver.com">네이버 이동</a>
+  <a class="link" href="https://wwww.daum.net">다음 이동</a>
+  <script>
+    const aLinks = document.querySelectorAll(".link");
+    aLinks.forEach((el) => {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+      })
+    })
+  </script> -->
+
+  <pre>- input에서 키다운했을때 키코드 및 키 입력을 boolean으로~</pre>
+  <form>
+    <input type="text" name="key" id="">
+  </form>
+  <script>
+    const inputKey = document.querySelector("input[name='key']");
+    inputKey.addEventListener("keydown", (e) => {
+      console.log(`keyCode : ${e.keyCode}`)
+      console.log(`ctrlKey : ${e.ctrlKey}`)
+      console.log(`altKey : ${e.altKey}`)
+      console.log(`shiftKey : ${e.shiftKey}`)
+    })
+  </script>
+
 
   <pre>- 클릭시 pointerEvent 객체 속성 출력</pre>
   <button class="event">PointerEvent 객체 클릭</button>
@@ -224,14 +255,18 @@
     }
   </script>
 
-  <button class="propertyBtn">클릭</button>
+  <button class="propertyBtn">함수표현식 클릭</button>
   <script>
     const btnElw = document.querySelector(".propertyBtn");
-    btnElw.onclick = function () {
-      alert("click");
-    }
-
+    // btnElw.onclick = function () {
+    //   alert("click");
+    // }
     // btnEl.onclick = () => alert("arrow click");
+
+    const addClick = () => {
+      alert('click');
+    }
+    btnElw.addEventListener("click", addClick);
 
     // btnEl.onclick = clickEvent;
     // function clickEvent() {
@@ -246,7 +281,7 @@
       <option value="melon">멜론</option>
     </select>
   </form>
-  <form action="">
+  <form>
     <select class="bgChangeSelect">
       <option value="">배경선택</option>
       <option value="blue">blue</option>
@@ -274,53 +309,49 @@
     // bgChangeSelect.addEventListener("change", changeColor);
 
   </script>
-  <form>
-    <label><input type="checkbox" value="apple"> 사과</label>
-    <label><input type="checkbox" value="banana"> 바나나</label>
-    <label><input type="checkbox" value="orange"> 오렌지</label>
-    <label><input type="checkbox" value="melon"> 멜론</label>
-  </form>
 
-  <form>
-    <label><input type="radio" name="fruits" value="apple"> 사과</label>
-    <label><input type="radio" name="fruits" value="banana"> 바나나</label>
-    <label><input type="radio" name="fruits" value="orange"> 오렌지</label>
-    <label><input type="radio" name="fruits" value="melon"> 멜론</label>
-  </form>
+  <div class="checkbox-group">
+    <label>
+      <input type="checkbox" value="apple">
+      <span>사과</span>
+    </label>
+    <label>
+      <input type="checkbox" value="banana">
+      <span>바나나</span>
+    </label>
+    <label>
+      <input type="checkbox" value="orange">
+      <span>오렌지</span>
+    </label>
+    <label>
+      <input type="checkbox" value="melon">
+      <span>멜론</span>
+    </label>
+  </div>
+  <div class="radio-group">
+    <label>
+      <input type="radio" name="fruits" value="apple">
+      <span>사과</span>
+    </label>
+    <label>
+      <input type="radio" name="fruits" value="banana">
+      <span>바나나</span>
+    </label>
+    <label>
+      <input type="radio" name="fruits" value="orange">
+      <span>오렌지</span>
+    </label>
+    <label>
+      <input type="radio" name="fruits" value="melon">
+      <span>멜론</span>
+    </label>
+  </div>
   <script>
     const radioEl1 = document.querySelectorAll("input[type='radio']");
     for (let i = 0; i < radioEl1.length; i++) {
       (radioEl1[i].checked === true) ? console.log(radioEl1[i].value) : undefined
     }
   </script>
-  <div class="checkbox-group">
-    <label>
-      <input type="checkbox" name="" value="">
-      <span>체크박스1</span>
-    </label>
-    <label>
-      <input type="checkbox" name="" value="">
-      <span>체크박스2</span>
-    </label>
-    <label>
-      <input type="checkbox" name="" value="">
-      <span>체크박스3</span>
-    </label>
-  </div>
-  <div class="radio-group">
-    <label>
-      <input type="radio" name="" value="">
-      <span>라디오버튼1</span>
-    </label>
-    <label>
-      <input type="radio" name="" value="">
-      <span>라디오버튼2</span>
-    </label>
-    <label>
-      <input type="radio" name="" value="">
-      <span>라디오버튼3</span>
-    </label>
-  </div>
 
   <button onclick="clickEvent()">클릭</button>
   <script>
