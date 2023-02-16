@@ -1,1 +1,132 @@
-/* 여기부터 책의 코드를 작성해주세요 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap');
+/* header.css */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+a, a:link, a:visited{
+  color:inherit;
+  text-decoration:none;
+}
+li{
+  list-style:none;
+}
+
+/* html{scroll-behavior:smooth;} */
+html, body{margin:0; padding:0; -webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; word-wrap:normal; word-break:keep-all; }
+html, body, input, textarea, select, table, button{font-family:'Noto Sans KR', 'malgun gothic', dotum, sans-serif; font-size:62.5%; color:#333; letter-spacing:-0.02em;}
+
+img{margin:0; padding:0; border:none; vertical-align:top;}
+
+ol{margin:0 0 0 -25px;}
+dl,dt,dd{margin:0; padding:0;}
+
+h1,h2,h3,h4,h5,h6{clear:both;margin:0;padding:0; font-weight:600;}
+
+em{font-style:normal;}
+small{font-style:normal;}
+p{margin:0; padding:0;}
+strong, b{font-weight:600;}
+abbr[title]{text-decoration:none;}
+button{cursor:pointer}
+
+iframe{margin:0;padding:0;border:none;}
+
+hr{display:none;}
+
+table caption{width:0; height:0; overflow:hidden;}
+table,th,td{margin:0; padding:0; border:none;}
+th{font-weight:500;}
+
+.inner{width:1140px;margin:0 auto;}
+
+header{position:fixed;left:0;right:0;top:0;padding:15px;box-sizing:border-box;color:#fff;transition: 0.5s all ease;}
+header.active{background:rgba(0,0,0,0.8);}
+header .inner{display:flex;justify-content: space-between;align-items: center; width:auto;}
+
+h1 a{font-size: 3rem;}
+header nav ul{display: flex;}
+header nav ul li{padding:10px;}
+header nav ul li a{font-size:2rem;}
+
+main{width:100%;height:100vh;display: flex;justify-content: center;align-items: center;background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(./images/me.jpg) no-repeat center center / cover;color:#fff;}
+main .inner{text-align: center;}
+main .inner h3{font-size:3.2rem;}
+main .inner h2{font-size:5.6rem;margin:30px 0;font-family:"Varela Round", sans-serif;}
+main .inner h2 span:after{display:inline-block;content:"";width:3px;height:50px;background:#fff;animation:cursor 1s ease infinite;}
+@keyframes cursor {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+main .inner p{max-width:500px;font-size:2rem;line-height:150%;margin:30px auto;}
+main .inner .down{display: inline-block;padding:15px 30px;border:3px solid #fff;border-radius: 20px;font-size:1.5rem;box-sizing: border-box;}
+main .pointer{display:inline-block;position:absolute;left:50%;bottom:20px;transform: translateX(-50%); font-size:3rem;color:#fff;animation:mouse 1s ease infinite;}
+@keyframes mouse{
+  0%{bottom: 20px;}
+  50%{bottom: 30px;}
+  100%{bottom: 20px;}
+}
+
+section{padding:80px 0;}
+section:nth-child(2n-1){background:#eee;}
+section h2{font-size:5.5rem;font-family:'Poppins', sans-serif;margin-bottom:60px;}
+section h2 span{display: block; font-size:2rem;color:#ed4848}
+.section01{display: flex;}
+.section01 span{width:50%;flex-shrink: 0;}
+.section01 span img{max-width:100%;}
+.section01 .intro{padding-left:30px;}
+.section01 .intro h3{font-size:3.6rem;margin-bottom:20px;}
+.section01 .intro h3 span{color:#ed4848;}
+.section01 .intro p{font-size:2rem;margin-bottom:15px;}
+.section01 .intro .sns a{font-size:4rem;margin-right:10px;transition: all 0.5s ease;}
+.section01 .intro .sns a:hover{color:#ed4848;}
+
+.section02{display: flex;justify-content: space-between;}
+.section02>div{width:calc(33.33% - 40px);}
+.section02>div>a{display: block;background:#fff;padding:30px;transition: all 0.5s ease;}
+.section02>div>a:hover{background:#ed4848;color:#fff;}
+.section02>div>a>i{font-size:4rem;color:#ed4848;}
+.section02>div>a:hover>i{color:#fff;}
+.section02 h3{font-size:3.2rem;margin:30px 0;}
+.section02 p{font-size:1.8rem;}
+
+.section03{width:100%;height:650px;background: url(./images/background.jpg) no-repeat center center / cover;background-attachment: fixed;}
+
+.section04{display: flex;justify-content: space-between;flex-flow:wrap;}
+.section04>div{width:calc(33.33% - 40px);border:1px solid #ddd;padding:15px;margin-bottom:50px;background:#fff;}
+.section04>div>span{display: block;overflow: hidden;}
+.section04>div>span:hover>img{transform: scale(1.1);}
+.section04>div>span>img{width:100%;transition: all 0.5s ease;}
+
+.section04 em{display: block;font-size:1.6rem;color:#ed4848;margin:5px 0;font-weight:bold;}
+.section04 .title{font-size:2.5rem;font-weight:bold;}
+
+.section05{display: flex;justify-content: space-between;}
+.section05 .info-list{width:30%;}
+.section05 li{display: flex; border:1px solid #ddd;padding:15px;margin-bottom:20px;}
+.section05 li .icon{font-size:3rem;}
+.section05 li .info-text{padding-left:20px;}
+.section05 li h4{font-size:1.8rem;}
+.section05 li p{font-size:1.6rem;}
+.section05 .info-form{width:calc(70% - 50px);border:1px solid #ddd;padding:15px;}
+.section05 .info-form label span{display: block;font-size:1.6rem;margin:10px 0;}
+.section05 .info-form label:first-of-type span{margin-top:0;}
+.section05 .info-form label input{width:100%;height:37px;border:1px solid #ccc;border-radius: 5px;}
+.section05 .info-form label textarea{width:100%;height:300px;border:1px solid #ccc;border-radius: 5px;}
+.section05 .info-form button{width:100%;height:40px;font-size:1.3rem;background-color:#f78b00;color:#fff;border:0;margin-top:20px;}
+
+
+@media all and (max-width:1140px){
+  .container .inner{width:auto;padding:0 30px;}
+  section > .inner > div{flex-flow:wrap;}
+  .section01 span{width:100%;}
+  .section01 .intro{padding:0;}
+  .section02>div{width:100%;margin-bottom:20px;}
+  .section04>div{width:calc(50% - 20px)}
+  .section05 .info-list,
+  .section05 .info-form{width:100%;}
+}
+@media all and (max-width:768px){
+  .section04>div{width:100%}
+}
