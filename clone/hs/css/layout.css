@@ -1,0 +1,53 @@
+#wrap{min-width:1380px;}
+
+.inner{position:relative;width:1380px;margin:0 auto;}
+
+#wrap > header{border-bottom:1px solid #D6D6D6; box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);}
+header .header-top .inner{display:flex;justify-content:end;align-items:center;padding:5px 0;}
+header .header-top .inner > a{position:relative;display:block;padding:0px 10px; font-size: 14px;}
+header .header-top .inner > a:after{display:block;content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:11px;background:#616161;}
+header .header-top .inner > a.btn-sitemap:after{content:none;}
+header .header-top .inner > .top-search{position:relative; margin-left: 25px;}
+header .header-top .inner > .top-search .text-keyword{width:269px;height:33px;background:#F9F9F9;border:1px solid #dedede;border-radius:4px;}
+header .header-top .inner > .top-search .text-keyword::placeholder{font-size: 15px;}
+header .header-top .inner > .top-search .btn-search{position:absolute;right:0;top:0;text-indent:-9999px;width:33px;height:33px;background:url(/images/common/icon-header-search.png) center center no-repeat;}
+header .header-top .history-home{background:#FFE6E6 url(/images/main/header-top-home.png)no-repeat left 10px center; height: 32px; line-height: 32px; padding: 0 10px 0 35px !important; box-sizing: border-box; border-radius: 8px; margin-right: 10px;}
+header .header-top .history-home:after{display: none !important;}
+header .header-nav.active{position:absolute;left:0;right:0;border-bottom:1px solid #ddd;box-shadow: 0 0 2px rgba(0,0,0,0.5);}
+header .header-nav .inner{display:flex;justify-content:space-between;align-items:center; position: static;}
+header .header-nav h1{width:267px;height:63px;background:url(/images/common/gurologo.png) 0 0 no-repeat;text-indent:-9999px; margin-top: -25px;}
+header .header-nav nav{padding:25px 0;}
+header .header-nav nav > ul{display:flex;}
+header .header-nav nav ul > li > a{display:inline-flex;font-size:19px;font-weight:500;margin-right:70px;}
+header .header-nav nav ul > li:last-child > a{margin:0;}
+header .header-nav .depth2,
+header .header-nav .depth3{display: none;}
+header .header-top{padding-top: 10px;}
+header .all-nav{position:absolute; left: 0; top:122px; width: 100%;height:0;overflow:hidden; background: #fff;box-shadow: 0px 8px 5px 1px rgb(0 0 0 / 5%); z-index: 999; border-top: 1px solid #D6D6D6;transition:all 0.5s ease-out;}
+header .all-nav .inner{padding: 0;}
+header .all-nav.active{display: block;}
+header .all-nav > div > ul{display: flex; width: 100%; margin-left: 540px; width: 716px;}
+header .all-nav > div > ul > li{width: 24%; padding:10px 0 20px 10px; box-sizing: border-box; border-right: 1px solid #F3F3F3;}
+header .all-nav > div > ul > li:last-child{border-right: 0;}
+header .all-nav strong{display: none; position: relative; color:#A4BDFF; font-size: 22px; padding-bottom:15px; }
+header .all-nav strong::after{content: ''; position: absolute; left:0; bottom:0; width: 25px; height: 1px; background: #A4BDFF;}
+header .all-nav .depth-one > li{padding-top: 10px;}
+header .all-nav .depth-one > li > a{font-size: 16px; padding-bottom: 10px; line-height: 140%;}
+header .all-nav .depth-two > li > a{font-size: 14px; color: #999; font-weight: 500; padding-bottom: 7px; padding-left: 6px;}
+header .all-nav .depth-one > li > a:hover{color:#8FB3EA}
+
+#wrap > footer{padding:50px 0;background:#EDECEC;}
+#wrap > footer .inner{display:flex;align-items:center;}
+footer h1{width:221px;height:38px;background:url(/images/common/logo.png) 0 0 no-repeat;text-indent:-9999px;filter:grayscale(100%);}
+footer .footer-container{margin-left:58px;font-size:14px;}
+footer .footer-container .footer-links{display:flex; margin-bottom:11px;}
+footer .footer-container .footer-links a{position:relative;display:block;color:#787878;padding:0 10px;}
+footer .footer-container .footer-links a:before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:13px;background:#DEDEDE;}
+footer .footer-container .footer-links a:first-child{padding-left:0;}
+footer .footer-container .footer-links a:first-child:before{content:none;}
+footer .footer-container .copyright address{margin-bottom:7px;}
+footer .footer-container .copyright ul{display:flex;margin-bottom:9px;}
+footer .footer-container .copyright ul li{position:relative;padding:0 10px;}
+footer .footer-container .copyright ul li:first-child{padding-left:0;}
+footer .footer-container .copyright ul li:before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:13px;background:#DEDEDE;}
+footer .footer-container .copyright p{color:#aaa;font-size:13px;}

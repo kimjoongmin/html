@@ -1,0 +1,53 @@
+#sub-content{display:flex; min-height:500px; align-items:flex-start; padding-top: 40px;}
+
+#side-menu{position:relative;  min-width:240px; box-sizing:border-box;  min-height:500px; margin-bottom: 20px;}
+#side-menu h2{font-size:24px; position: relative; font-weight:bold; text-align:center; color:#fff; height: 100px; line-height: 100px; border-radius: 20px 20px 0 0; background: #8FB3EA;}
+#side-menu h2:before{content:''; position:absolute; left:30px; bottom:-10px; border:3px solid #fff; border-radius: 50%; width:19px; height: 19px; box-sizing: border-box; background: #8FB3EA;}
+#side-menu h2:after{content:''; position:absolute; right:30px; bottom:-10px; border:3px solid #fff; border-radius: 50%; width:19px; height: 19px; box-sizing: border-box; background: #8FB3EA;}
+
+#side-menu.typeSearch{background:#fff url(http://guroscc.gabia.io//images/sub/typeSearch.png)no-repeat center top 40px;}
+#side-menu .two-depth{position: relative; padding:15px 25px; border: 2px solid #8FB3EA; box-sizing: border-box; margin-top: 15px; border-radius: 0 0 20px 20px;}
+#side-menu .two-depth:after{content: ''; position: absolute; left:36px;top:-15px; height:15PX; width: 2px; background: #8FB3EA;}
+#side-menu .two-depth:before{content: ''; position: absolute; right:36px;top:-15px; height:15PX; width: 2px; background: #8FB3EA;}
+
+#side-menu .two-depth > li > a{display:block; font-size:15px; padding:15px 0; font-size: 16px; color:#333; font-weight:bold; border-bottom:1px dashed #ddd; padding-right: 20px; line-height: 140%;}
+#side-menu .two-depth > li:last-child > a{border-bottom: none;}
+#side-menu .two-depth > li > a.active{background: url(http://guroscc.gabia.io//images/sub/sidemenuIcon.png)no-repeat right 10px center;}
+#side-menu .two-depth > li.on{background:url(http://guroscc.gabia.io//images/content/arrow-right-s-line.png) top 22px right no-repeat;}
+#side-menu .two-depth > li.active .three-depth{display:block; height:auto; border-bottom:1px dashed #ddd;}
+#side-menu .two-depth > li.active > a{color:#8FB3EA; background:url(http://guroscc.gabia.io//images/sub/sidemenuIcon2.png) center right no-repeat;}
+#side-menu .three-depth.active{height:auto; padding:15px 0;}
+#side-menu .three-depth{height:0px; overflow:hidden; padding:0px;  transition:0.5s;}
+#side-menu .three-depth > li >a{position:relative; display:block; font-size:14px; padding:10px 0; color:#333; padding-left:20px;} 
+#side-menu .three-depth > li >a:before{position:absolute; content:''; display:block; width:7px; height:2px; left:5px; top:16px; background:#333;}
+#side-menu .three-depth > li.active a{color:#8FB3EA; }
+#side-menu .three-depth > li.active a:before{background:#8FB3EA;}
+
+#content{width:100%; margin-left:38px; margin-bottom:60px; min-height:500px;}
+#content > h2{display:block; font-size:26px; border-bottom:1px solid #DEDEDE; padding-bottom:20px; margin-bottom:40px}
+
+.location{display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom:1px solid #ccc;}
+.location ul{display: flex; align-items: center;}
+.location ul li{padding:0 15px; position: relative;}
+.location ul li:after{content:''; background: url(http://guroscc.gabia.io//images/sub/location_arrow_guro.png)no-repeat center; position: absolute; left:-7px; top:1px; width: 16px; height: 16px;}
+.location ul li:first-child::after{display: none;}
+.location ul li.home{display: block; background: url(http://guroscc.gabia.io//images/sub/location_home_guro.png)no-repeat center; width:24px; height:24px; text-indent: -9999px;}
+.location h2{font-size: 26px;}
+
+h4{padding-left:18px; position:relative; font-size:20px; margin-bottom:25px;}
+h4 span{color:#8FB3EA;}
+h4:before{content:''; position:absolute; left:0; top:10%; bottom:10%; width:3px; background:#8FB3EA;}
+.h4Content{margin-bottom:45px;}
+.h4Content > p{line-height: 150%; margin-bottom: 10px;}
+.h4Content > strong{display: block; padding-bottom: 20px; font-size: 18px; font-weight: 600;}
+.h4Content > strong.big-title{font-size: 22px; color:#7291E0;}
+.h4Content:last-child{margin-bottom:0;}
+
+.greeting-wrap{ background: url(http://guroscc.gabia.io//images/sub/greeting_bg@2x.png)no-repeat center; background-size: 100% auto; padding:50px 60px; box-sizing: border-box; border-radius: 20px;}
+.greeting-wrap strong{display: block; font-size: 27px; padding-bottom: 30px; color:#7291E0;}
+.greeting-wrap p{line-height: 160%;}
+.greeting-wrap span.space{display: block; height: 25px;}
+.greeting-wrap2{padding:50px 60px; background-color: #F4F9FF; margin-top: 20px; border-radius: 20px;}
+.greeting-wrap2 p{display: block; padding-bottom: 10px; line-height: 160%;}
+.greeting-wrap2 strong{display: block; font-weight: 600;}
+.greeting-wrap2 span{display: block; text-align: right; padding-bottom: 10px;}
